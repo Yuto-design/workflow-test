@@ -23,10 +23,19 @@ jobs:
         run: |
           pip install -r requirements.txt
 
-      - name: Run Pytest
+      - name: Run pytest
         run: |
           pytest
+
+      - name:
+        if: failure()
+        run: |
+          echo "1つ前のstepが失敗しました"
 
       - name: Print DB_USER
         run: |
           echo "DB_USER -> ${DB_USER}"
+
+      - name: Print secrets
+        run: |
+          echo "API_KEY -> ${{secrets.API_KEY}}"
