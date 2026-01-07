@@ -51,3 +51,7 @@ GitHub Actions を用いて Pull Request 作成時に自動で pytest を実行�
 - date コマンドで時刻を取得
 - $GITHUB_OUTPUT を用いて次の Step へ出力を受け渡し
 
+## 目的
+- GitHub Actions による CI/CD パイプラインの動作確認
+- pytest を用いた自動テストの導入検証
+- 環境変数・Secrets・Step 出力の扱い方の理解
